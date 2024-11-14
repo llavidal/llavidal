@@ -13,16 +13,104 @@
 
   <title>LLAVIDAL</title>
   <link rel="icon" type="image/x-icon" href="static/images/llavidal_logo.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600|Poppins:600,700" rel="stylesheet">
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, #2C3E50, #3498DB);
+      padding: 4rem 0;
+    }
+    
+    .hero .title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    
+    .hero .subtitle {
+      font-weight: 600;
+      opacity: 0.9;
+    }
+    
+    .section {
+      padding: 4rem 1.5rem;
+    }
+    
+    .section:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    .title.is-3 {
+      font-family: 'Poppins', sans-serif;
+      color: #2C3E50;
+      margin-bottom: 2rem;
+    }
+    
+    .content p {
+      font-size: 1.1rem;
+      color: #2C3E50;
+    }
+    
+    .image {
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .image:hover {
+      transform: translateY(-5px);
+    }
+    
+    .subtitle {
+      font-size: 1.1rem;
+      color: #34495e;
+      margin-top: 1rem;
+    }
+    
+    #tree {
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      margin: 2rem 0;
+    }
+    
+    .footer {
+      background-color: #2C3E50;
+      color: white;
+      padding: 3rem 1.5rem;
+    }
+    
+    .footer a {
+      color: #3498DB;
+    }
+    
+    .container {
+      max-width: 1200px;
+      padding: 0 1.5rem;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .hero {
+        padding: 3rem 0;
+      }
+      
+      .title.is-1 {
+        font-size: 2rem;
+      }
+      
+      .section {
+        padding: 3rem 1rem;
+      }
+    }
+  </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
 </head>
 <body>
-
-  <!-- Main Hero Section -->
   <section class="hero is-info">
     <div class="hero-body">
       <div class="container has-text-centered">
@@ -32,11 +120,10 @@
     </div>
   </section>
 
-  <!-- Teaser Video Section -->
   <section class="section">
     <div class="container">
       <div class="content has-text-centered">
-        <video poster="" id="tree" autoplay muted loop style="width: 100%; height: auto;">
+        <video poster="" id="tree" autoplay muted loop playsinline>
           <source src="static/videos/adlxteaser_final.mp4" type="video/mp4">
         </video>
         <h2 class="subtitle">LLAVIDAL vs. Standard LLVMs: Understanding Complex Human-Object Interactions</h2>
@@ -44,7 +131,6 @@
     </div>
   </section>
 
-  <!-- Abstract Section -->
   <section class="section">
     <div class="container">
       <h2 class="title is-3 has-text-centered">Abstract</h2>
@@ -54,18 +140,17 @@
     </div>
   </section>
 
-  <!-- Image Carousel Section -->
   <section class="section">
     <div class="container">
       <h2 class="title is-3 has-text-centered">Data Curation and Architecture</h2>
-      <div class="columns is-multiline">
-        <div class="column is-one-third">
+      <div class="columns is-multiline is-centered">
+        <div class="column is-5">
           <figure class="image is-4by3">
             <img src="static/images/ADL-Data curation process.png" alt="Data Curation Process">
           </figure>
           <h3 class="subtitle has-text-centered">ADL-X Data Curation Process</h3>
         </div>
-        <div class="column is-one-third">
+        <div class="column is-5">
           <figure class="image is-4by3">
             <img src="static/images/ADL-architecture.png" alt="LLAVIDAL Architecture">
           </figure>
@@ -75,24 +160,23 @@
     </div>
   </section>
 
-  <!-- Results Sections -->
   <section class="section">
     <div class="container">
       <h2 class="title is-3 has-text-centered">Quantitative Results</h2>
       <div class="columns is-multiline">
-        <div class="column is-one-third">
+        <div class="column is-4">
           <figure class="image is-4by3">
             <img src="static/images/Impact_of_ADL-X_Training.png" alt="Impact of ADL-X Training">
           </figure>
           <h3 class="subtitle has-text-centered">Impact of ADL-X Training</h3>
         </div>
-        <div class="column is-one-third">
+        <div class="column is-4">
           <figure class="image is-4by3">
             <img src="static/images/charades_SH.png" alt="ADLMCQ - Action Recognition">
           </figure>
           <h3 class="subtitle has-text-centered">ADLMCQ - Action Recognition</h3>
         </div>
-        <div class="column is-one-third">
+        <div class="column is-4">
           <figure class="image is-4by3">
             <img src="static/images/lemma_TSU.png" alt="ADLMCQ - Action Forecasting">
           </figure>
@@ -102,20 +186,19 @@
     </div>
   </section>
 
-  <!-- License Section -->
   <section class="section has-background-light">
     <div class="container">
-      <h2 class="title has-text-centered">Usage License</h2>
-      <p>This dataset is protected under the CC-BY license of Creative Commons, permitting distribution, remixing, adaptation, and building upon the material, provided attribution is given.</p>
+      <h2 class="title is-3 has-text-centered">Usage License</h2>
+      <div class="content has-text-centered">
+        <p>This dataset is protected under the CC-BY license of Creative Commons, permitting distribution, remixing, adaptation, and building upon the material, provided attribution is given.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container has-text-centered">
       <p>Website template by <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a></p>
     </div>
   </footer>
-
 </body>
 </html>
